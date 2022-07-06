@@ -12,6 +12,9 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+	cucumberRuntime {
+		extendsFrom testImplementation
+	}
 }
 
 repositories {
@@ -26,6 +29,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	developmentOnly "org.springframework.boot:spring-boot-devtools"
+	testImplementation 'io.cucumber:cucumber-java:6.10.4'
 }
 
 tasks.named('test') {
