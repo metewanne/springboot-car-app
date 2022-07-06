@@ -12,9 +12,7 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
-	cucumberRuntime {
-		extendsFrom testImplementation
-	}
+
 }
 
 repositories {
@@ -23,13 +21,14 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	//implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	developmentOnly "org.springframework.boot:spring-boot-devtools"
 	testImplementation 'io.cucumber:cucumber-java:6.10.4'
+	testImplementation 'org.junit.vintage:junit-vintage-engine:5.7.2'
+
 }
 
 tasks.named('test') {
