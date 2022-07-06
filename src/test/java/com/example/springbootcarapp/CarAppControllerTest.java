@@ -1,4 +1,4 @@
 package com.example.springbootcarapp;
 
-public class CarTest {
+public class CarAppControllerTest {
 }
