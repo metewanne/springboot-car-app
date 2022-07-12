@@ -1,4 +1,4 @@
-package com.sky.uk.carapp.application;
+package com.sky.uk.carapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -18,10 +18,11 @@ import java.util.UUID;
 public class AppController {
 
     @GetMapping("/status")
-    public ResponseEntity<String> name(@RequestHeader Map<String, String> headers) {
-        HttpHeaders responseHeaders = new HttpHeaders();
-        responseHeaders.set("x-sky-request-id", UUID.randomUUID().toString());
-        return new ResponseEntity<String>("Ok", responseHeaders, HttpStatus.OK);
+    public ResponseEntity<String> name() {
+        return new ResponseEntity<>("OK",HttpStatus.OK);
+//        HttpHeaders responseHeaders = new HttpHeaders();
+//        responseHeaders.set("x-sky-request-id", UUID.randomUUID().toString());
+//        return new ResponseEntity<String>("Ok", responseHeaders, HttpStatus.OK);
     }
 }
 
