@@ -16,15 +16,15 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/private")
 public class AppController {
+
     private final ViewModel viewModel;
-    @Autowired
+
     public AppController(ViewModel viewModel) {
         this.viewModel = viewModel;
     }
 
     @GetMapping("/status")
     public ResponseEntity<String> name() {
-
         return new ResponseEntity<String>("OK", viewModel.generateRandomHeader(), HttpStatus.OK);
     }
 
