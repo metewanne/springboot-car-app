@@ -21,7 +21,6 @@ public class AppController {
     public ResponseEntity<String> name() {
         return new ResponseEntity<String>("OK", generateHeader.generateRandomHeader(), HttpStatus.OK);
     }
-
 }
 
 

@@ -12,7 +12,6 @@ import static io.restassured.RestAssured.given;
 @Component
 @Slf4j
 public class Client {
-
     @Value("${service.base.url}")
     private String baseURL;
 

@@ -8,11 +8,9 @@ import java.util.UUID;
 
 @Component
 public class GenerateHeader {
-
     public HttpHeaders generateRandomHeader() {
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.set("x-sky-request-id", UUID.randomUUID().toString());
         return responseHeaders;
     }
-
 }

@@ -13,7 +13,6 @@ public class PrivateEndpointSteps {
     HttpRequest http = new HttpRequest();
     Client client = new Client();
 
-
     @When("the client calls {string}")
     public void clientCallsPrivateStatus(String outStr) {
         http.setResponse(client.sendGetRequest(outStr));

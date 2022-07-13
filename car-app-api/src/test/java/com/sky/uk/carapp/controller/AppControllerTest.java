@@ -16,14 +16,9 @@ import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-
-
 @ExtendWith(MockitoExtension.class)
 
-
-
 public class AppControllerTest {
-
     @Autowired
     private GenerateHeader generateHeader = new GenerateHeader();
 
@@ -36,7 +31,6 @@ public class AppControllerTest {
 
     @Mock
     ResponseEntity<String> responseEntity = new ResponseEntity<String>("body", generateHeader.generateRandomHeader(), HttpStatus.OK);
-
 
     @Test
     public void testResponseBody() {

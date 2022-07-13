@@ -22,5 +22,4 @@ public class HttpRequest {
     public int getResponseStatusCode() {
         return this.response.getStatusCode();
     }
-
 }
