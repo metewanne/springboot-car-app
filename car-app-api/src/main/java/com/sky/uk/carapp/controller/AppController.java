@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/private")
 public class AppController {
-    @Autowired
+
     private final GenerateHeader generateHeader;
 
     public AppController(GenerateHeader generateHeader) {
         this.generateHeader = generateHeader;
     }
     @GetMapping("/status")
-    public ResponseEntity<String> name() {
+    public ResponseEntity<String> responseEntity() {
         return new ResponseEntity<String>("OK", generateHeader.generateRandomHeader(), HttpStatus.OK);
     }
 }
