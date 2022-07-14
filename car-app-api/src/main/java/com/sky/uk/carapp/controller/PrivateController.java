@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/private")
 @RequiredArgsConstructor
-public class AppController {
+public class PrivateController {
 
 
     private final GenerateHeaderService generateHeaderService;
 
     //Used Lombok with @RequiredArgsConstructor
-//    public AppController(GenerateHeaderService generateHeaderService) {
+//    public PrivateController(GenerateHeaderService generateHeaderService) {
 //        this.generateHeaderService = generateHeaderService;
 //    }
 

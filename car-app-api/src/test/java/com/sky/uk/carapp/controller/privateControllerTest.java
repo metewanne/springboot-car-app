@@ -13,10 +13,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MockitoExtension.class)
 
-public class AppControllerTest {
+public class PrivateControllerTest {
 
     @InjectMocks
-    AppController appController;
+    PrivateController privateController;
 
     //in the examples the dependencies are mocked
     @Mock
@@ -24,12 +24,12 @@ public class AppControllerTest {
 
     @Test
     public void testResponseBody() {
-        assertTrue(Objects.requireNonNull(appController.responseEntity().getBody()).matches("OK"));
+        assertTrue(Objects.requireNonNull(privateController.responseEntity().getBody()).matches("OK"));
     }
 
     @Test
     public void testResponseStatus() {
-        assertTrue((appController.responseEntity().getStatusCode().is2xxSuccessful()));
+        assertTrue((privateController.responseEntity().getStatusCode().is2xxSuccessful()));
     }
 
 }

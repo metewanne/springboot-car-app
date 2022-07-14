@@ -4,7 +4,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.sky.uk.carapp.functional.*")
+@ComponentScan("com.sky.uk.carapp.*")
 
 public class ComponentConfig {
 }

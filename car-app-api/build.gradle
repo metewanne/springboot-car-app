@@ -20,6 +20,9 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.data:spring-data-mongodb'
+    compileOnly 'org.springframework.data:spring-data-mongodb'
+
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'junit:junit:4.13.1'
