@@ -1,6 +1,8 @@
 package com.sky.uk.carapp.service;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -9,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GenerateHeaderServiceTest {
+
     GenerateHeaderService generateHeaderService = new GenerateHeaderService();
 
     @Test

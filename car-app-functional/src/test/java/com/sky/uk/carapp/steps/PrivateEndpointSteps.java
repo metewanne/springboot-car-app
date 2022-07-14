@@ -13,7 +13,7 @@ public class PrivateEndpointSteps {
     HttpRequest http = new HttpRequest();
     Client client = new Client();
 
-    @When("the client calls {string}")
+    @When("the client calls {string} and happy case scenario")
     public void clientCallsPrivateStatus(String outStr) {
         http.setResponse(client.sendGetRequest(outStr));
     }
@@ -23,7 +23,7 @@ public class PrivateEndpointSteps {
         assertThat(http.getResponseStatusCode()).isEqualTo(code);
     }
 
-    @Then("the client receives a body of {string}")
+    @And("the client receives a body of {string}")
     public void client_receives_a_body_of(String body) {
         assertThat(http.getResponseBody()).contains(body);
     }
