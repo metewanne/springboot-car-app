@@ -20,6 +20,7 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb:2.7.1'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
@@ -28,7 +29,7 @@ dependencies {
 	developmentOnly "org.springframework.boot:spring-boot-devtools"
 	testImplementation 'io.cucumber:cucumber-java:6.10.4'
 	testImplementation 'org.junit.vintage:junit-vintage-engine:5.7.2'
-
+	testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
 }
 
 tasks.named('test') {

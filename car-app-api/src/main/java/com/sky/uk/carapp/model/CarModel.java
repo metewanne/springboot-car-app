@@ -1,5 +1,8 @@
 package com.sky.uk.carapp.model;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("cars")
 public class CarModel {
 
     private Long id;
