@@ -2,6 +2,7 @@ package com.sky.uk.carapp.service;
 
 import com.sky.uk.carapp.model.Car;
 import com.sky.uk.carapp.repository.CarRepository;
+import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +17,13 @@ public class CarService {
 
     public Car addCar(Car car){
         return carRepository.save(car);
+    }
+
+    public List<Car> addListOfCars(List<Car> cars) {
+
+        List<Car> addCars = new ArrayList();
+
+        return carRepository.saveAll(addCars);
     }
 
 }

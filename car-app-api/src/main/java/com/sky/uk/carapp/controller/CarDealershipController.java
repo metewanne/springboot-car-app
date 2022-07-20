@@ -27,6 +27,10 @@ public class CarDealershipController {
         return new ResponseEntity<Car>(addedCar, HttpStatus.CREATED);
     }
 
-
+    @PostMapping(path = "/addcars")
+    public ResponseEntity<List<Car>> saveCars(@RequestBody List<Car> cars){
+        List<Car> addedCars = carService.addListOfCars(cars);
+        return new ResponseEntity<List<Car>>(addedCars, HttpStatus.CREATED);
+    }
 
 }
