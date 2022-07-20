@@ -1,11 +1,13 @@
 package com.sky.uk.carapp.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("cars")
-public class CarModel {
+public class Car {
 
-    private Long id;
+    @Id
+    private String id;
     private String brand;
     private String model;
     private double year;
@@ -13,7 +15,7 @@ public class CarModel {
     private int mileage;
     private String colour;
 
-    public CarModel(Long id, String brand, String model, double year, int price, int mileage, String colour) {
+    public Car(String id, String brand, String model, double year, int price, int mileage, String colour) {
         this.id = id;
         this.brand = brand;
         this.model = model;
@@ -23,12 +25,8 @@ public class CarModel {
         this.colour = colour;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getBrand() {
