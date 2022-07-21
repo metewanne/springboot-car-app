@@ -10,12 +10,12 @@ public class Car {
     private String id;
     private String brand;
     private String model;
-    private double year;
+    private int year;
     private int price;
     private int mileage;
     private String colour;
 
-    public Car(String id, String brand, String model, double year, int price, int mileage, String colour) {
+    public Car(String id, String brand, String model, int year, int price, int mileage, String colour) {
         this.id = id;
         this.brand = brand;
         this.model = model;
@@ -49,7 +49,7 @@ public class Car {
         return year;
     }
 
-    public void setYear(double year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
