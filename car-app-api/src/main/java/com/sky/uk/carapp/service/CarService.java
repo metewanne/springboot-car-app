@@ -20,10 +20,7 @@ public class CarService {
     }
 
     public List<Car> addListOfCars(List<Car> cars) {
-
-        List<Car> addCars = new ArrayList();
-
-        return carRepository.saveAll(addCars);
+        return carRepository.saveAll(cars);
     }
 
 }

@@ -43,9 +43,8 @@ public class CarServiceTest {
         carList.add(new Car("1", "bmw", "x5", 2020, 500, 4000, "black"));
         carList.add(new Car("2", "tesla", "y", 2021, 5765, 44738, "white"));
         carList.add(new Car("3", "ford", "fiesta", 2015, 43749, 4736, "pink"));
-
-        when(carRepository.save(Mockito.any(Car.class))).thenAnswer(list -> carList.stream().anyMatch(id -> carList.get().getId()));
-        assertEquals("3", carService.addListOfCars(carList));
+        when(carRepository.saveAll(carList)).thenReturn(carList);
+        assertEquals(3 , carService.addListOfCars(carList).size());
     }
 }
 
