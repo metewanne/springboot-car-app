@@ -1,6 +1,4 @@
 package com.sky.uk.carapp.controller;
-
-import com.sky.uk.carapp.controller.PrivateController;
 import com.sky.uk.carapp.service.GenerateHeaderService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

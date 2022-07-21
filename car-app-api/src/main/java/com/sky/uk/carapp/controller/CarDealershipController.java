@@ -16,21 +16,16 @@ public class CarDealershipController {
 
     private final CarService carService;
 
-//    @GetMapping("")
-//    public ResponseEntity<List<Car>> getCars(){
-//
-//    }
-
     @PostMapping(path = "/addcar")
     public ResponseEntity<Car> saveCar(@RequestBody Car car){
         Car addedCar = carService.addCar(car);
-        return new ResponseEntity<Car>(addedCar, HttpStatus.CREATED);
+        return new ResponseEntity<>(addedCar, HttpStatus.CREATED);
     }
 
     @PostMapping(path = "/addcars")
     public ResponseEntity<List<Car>> saveCars(@RequestBody List<Car> cars){
         List<Car> addedCars = carService.addListOfCars(cars);
-        return new ResponseEntity<List<Car>>(addedCars, HttpStatus.CREATED);
+        return new ResponseEntity<>(addedCars, HttpStatus.CREATED);
     }
 
 }

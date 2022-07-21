@@ -2,7 +2,6 @@ package com.sky.uk.carapp.service;
 
 import com.sky.uk.carapp.model.Car;
 import com.sky.uk.carapp.repository.CarRepository;
-import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
